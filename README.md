@@ -2,25 +2,28 @@
 
 Open-source starter kit for building LLM-powered voice agents.
 
-## What is this?
-This project is a simplified version of a voice AI system designed for:
+## Overview
+
+This project is a lightweight starting point for building conversational voice agents for use cases such as:
+
 - AI sales calls
 - customer support automation
-- conversational voice agents
+- conversational voice workflows
+
+It currently includes a simple Python-based demo agent to simulate a voice conversation loop.
 
 ## Features
+
 - modular agent structure
-- prompt-based conversation logic
-- ready for ASR / TTS integration
-- Docker-ready architecture
+- prompt-based conversation flow
+- simple interactive demo
+- ready to expand with ASR / TTS / LLM integrations
 
-## Use case
-Example: AI agent that can simulate a sales call conversation.
+## Project structure
 
-## Tech stack
-- Python
-- LLM integration
-- Voice pipeline ready (ASR / TTS)
-
-## Note
-This is a simplified demo version without production-specific or client-specific logic.
+```text
+app/
+  demo_agent.py
+README.md
+.gitignore
+```
