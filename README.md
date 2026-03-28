@@ -73,3 +73,9 @@ We use HP LaserJet Pro.
 
 Agent:
 Perfect. Based on that, I can suggest compatible toner options that reduce cost per page. Would you like a standard or high-capacity solution?
+
+## Demo
+
+Example terminal interaction with the AI sales agent:
+
+![Demo](assets/demo.png)
