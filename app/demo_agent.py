@@ -1,32 +1,35 @@
-import random
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
 
-class VoiceAgent:
-    def __init__(self, name="AI Sales Agent"):
-        self.name = name
+load_dotenv()
 
-    def respond(self, user_input):
-        responses = [
-            "Interesting, can you tell me more about your current setup?",
-            "That makes sense. Many of our clients had the same issue.",
-            "We usually help reduce costs by optimizing supply processes.",
-            "Would you be open to a short demo call this week?"
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+def chat_with_agent(user_input):
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "You are a professional AI sales agent for toner products."},
+            {"role": "user", "content": user_input}
         ]
-        return random.choice(responses)
+    )
+    return response.choices[0].message.content
 
 
-def simulate_call():
-    agent = VoiceAgent()
-    print(f"{agent.name}: Hello, this is an AI assistant calling regarding your toner supply.")
+def main():
+    print("AI Sales Agent started. Type 'quit' to exit.\n")
 
     while True:
-        user_input = input("User: ")
-        if user_input.lower() in ["exit", "quit"]:
+        user_input = input("You: ")
+
+        if user_input.lower() == "quit":
             print("Call ended.")
             break
 
-        response = agent.respond(user_input)
-        print(f"{agent.name}: {response}")
+        reply = chat_with_agent(user_input)
+        print(f"Agent: {reply}\n")
 
 
 if __name__ == "__main__":
-    simulate_call()
+    main()
