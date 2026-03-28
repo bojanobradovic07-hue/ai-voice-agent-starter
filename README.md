@@ -24,6 +24,8 @@ It currently includes a simple Python-based demo agent to simulate a voice conve
 ```text
 app/
   demo_agent.py
+.env.example
+requirements.txt
 README.md
 .gitignore
 ```
@@ -34,3 +36,26 @@ README.md
 pip install -r requirements.txt
 cp .env.example .env
 ```
+
+## Use Case
+
+This project simulates a real-world AI sales agent for outbound calls.
+
+Example flow:
+
+- greeting
+- qualification
+- need discovery
+- offer generation
+- objection handling
+- closing
+
+## Roadmap
+
+- [x] Basic conversational demo
+- [x] LLM-ready setup
+- [ ] Conversation state machine
+- [ ] Speech-to-text integration
+- [ ] Text-to-speech integration
+- [ ] API layer
+- [ ] Multi-agent workflows
