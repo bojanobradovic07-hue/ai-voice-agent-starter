@@ -59,3 +59,17 @@ Example flow:
 - [ ] Text-to-speech integration
 - [ ] API layer
 - [ ] Multi-agent workflows
+
+## Example conversation
+
+User:
+Hi, I’m looking for toner supplies for our office printers.
+
+Agent:
+Hello, great to hear from you. May I ask which printer models you're currently using?
+
+User:
+We use HP LaserJet Pro.
+
+Agent:
+Perfect. Based on that, I can suggest compatible toner options that reduce cost per page. Would you like a standard or high-capacity solution?
